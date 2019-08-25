@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    tools:layout_editor_absoluteX="5dp"
+    tools:layout_editor_absoluteY="5dp">
+
+
+    <TextView
+        android:id="@+id/checkout_productVariation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        android:visibility="gone"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/checkout_productName"
+        app:layout_constraintTop_toBottomOf="@+id/checkout_productName" />
+
+    <ImageView
+        android:id="@+id/checkout_singleImg"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[11]" />
+
+
+    <TextView
+        android:id="@+id/checkout_productName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:orientation="horizontal"
+        android:text="Product Name"
+        android:textColor="#000"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkout_singleImg"
+        app:layout_constraintTop_toTopOf="@+id/checkout_singleImg" />
+
+
+    <TextView
+        android:id="@+id/checkout_productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="4567"
+        android:textColor="#338AFF"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/checkout_productSku"
+        app:layout_constraintTop_toTopOf="@+id/checkout_productSku" />
+
+    <TextView
+        android:id="@+id/checkout_prodtuct_quant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textColor="#008000"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/checkout_productPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toEndOf="@+id/checkout_productPrice" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="8dp"
+        android:background="#ffd7d4d4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkout_singleImg" />
+
+    <TextView
+        android:id="@+id/checkout_productSku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="TextView"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/checkout_productVariation"
+        app:layout_constraintTop_toBottomOf="@+id/checkout_productVariation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

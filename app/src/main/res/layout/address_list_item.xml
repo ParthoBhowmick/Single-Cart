@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/ChangeBilling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/shippingAddressID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Address #1"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/dltAddress"
+                    android:layout_width="25dp"
+                    android:layout_height="23dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/editAddress"
+                    android:src="@drawable/trash" />
+
+                <ImageView
+                    android:id="@+id/editAddress"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/edit_icon" />
+
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_below="@+id/shippingAddressID"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffd7d4d4" />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/ViewBilling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/userNameLI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name" />
+
+                    <TextView
+                        android:id="@+id/userContactLI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Contact Number" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/userEmailLI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Email" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/userDivLI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Div Name" />
+
+                    <TextView
+                        android:id="@+id/userDistLI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Dist Name" />
+
+                    <TextView
+                        android:id="@+id/userPlaceLI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Area Name" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/userAddressLI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="7dp"
+                    android:text="the address....." />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

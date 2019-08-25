@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_cart" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    app:cardCornerRadius="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp">
+
+                                <TextView
+                                    android:id="@+id/shippingAddressTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Shipping Address"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+
+                                <ImageView
+                                    android:id="@+id/changeShippingBtn"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/edit_icon" />
+
+                            </RelativeLayout>
+
+
+                            <View
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dip"
+                                android:background="#ffd7d4d4" />
+
+                            <Button
+                                android:id="@+id/addAddressBtnCH"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/dotted_border"
+                                android:text="+ Add Address"
+                                android:textColor="#23395d"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+
+                            <LinearLayout
+                                android:id="@+id/ViewShipping"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/userNameSA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Name" />
+
+                                    <TextView
+                                        android:id="@+id/userContactSA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="Contact Number" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/userEmailSA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Email" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/userDivSA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Div Name" />
+
+                                    <TextView
+                                        android:id="@+id/userDistSA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:text="Dist Name" />
+
+                                    <TextView
+                                        android:id="@+id/userPlaceSA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:text="Area Name" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/userAddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="the address....." />
+
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="1dip"
+                                    android:background="#ffd7d4d4" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/ChangeBilling"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/BillingAddressID"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Billing Address"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="17sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:id="@+id/ChangeBillingBtn"
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_alignParentRight="true"
+                                    android:src="@drawable/edit_icon" />
+
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="1dip"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_below="@+id/BillingAddressID"
+                                    android:background="#ffd7d4d4" />
+
+                            </RelativeLayout>
+
+
+                            <CheckBox
+                                android:id="@+id/hideBilling"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="Same As Shipping Address"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/ViewBilling"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/userNameBA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Name" />
+
+                                    <TextView
+                                        android:id="@+id/userContactBA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="20dp"
+                                        android:text="Contact Number" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/userEmailBA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="Email" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/userDivBA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Div Name" />
+
+                                    <TextView
+                                        android:id="@+id/userDistBA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:text="Dist Name" />
+
+                                    <TextView
+                                        android:id="@+id/userPlaceBA"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:text="Area Name" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/userAddressBA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="the address....." />
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="1dip"
+                                    android:layout_below="@+id/BillingAddressID"
+                                    android:background="#ffd7d4d4" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp"
+                            android:text="** Notice : Shipping charge &amp; Payment method may vary upon shipping address"
+                            android:textColor="#23395d"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#C8C8C8"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="Choose Payment Method (Required)"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/radioPayment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp">
+
+                        <RadioButton
+                            android:id="@+id/radioButton3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="SSLCommerz" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Bkash Payment" />
+
+                        <RadioButton
+                            android:id="@+id/radioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Cash On Delivary" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="Order Summary"
+                    android:textColor="#000"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/checkOutRecyler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/check_out_single">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+                </androidx.cardview.widget.CardView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Order Total : " />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/orderAmount"
+                            android:layout_marginRight="5dp"
+                            android:gravity="right"
+                            android:text="800" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:gravity="left"
+                            android:text="Shipping Charge : " />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:gravity="right"
+                            android:id="@+id/shipmentAmount"
+                            android:text="800" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/discountLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Coupon Discount : " />
+
+                        <TextView
+                            android:id="@+id/discountAmount"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:gravity="right"
+                            android:text="800" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="#A0A0A0A0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="Grand Total : " />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:gravity="right"
+                            android:id="@+id/totalAmount"
+                            android:text="800" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="0.15"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="52.56dp"
+                android:layout_weight="0.75"
+                android:background="#23395d"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:text=" Total :  "
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/placeOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="52.56dp"
+                android:layout_weight="0.25"
+                android:background="#338AFF"
+                android:gravity="center"
+                android:text="Place Order"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

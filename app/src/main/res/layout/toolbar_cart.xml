@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dip"
+    android:background="#338AFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/cart_toolbar_ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="18.0dip"
+            android:layout_height="18.0dip"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/toolbarHeader"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>

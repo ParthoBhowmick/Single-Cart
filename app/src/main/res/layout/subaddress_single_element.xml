@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/subAddressName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:padding="5dp"
+            android:text="text"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/subAddressSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp"
+            android:padding="3dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="3dp"
+        android:layout_below="@+id/shippingAddressID"
+        android:background="#b4b4b4" />
+
+</LinearLayout>
